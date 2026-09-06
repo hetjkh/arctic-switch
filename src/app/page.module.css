@@ -33,7 +33,7 @@
 .storyBackdrop { position: absolute; z-index: 1; inset: 0; opacity: 0; background: transparent; }
 .navSpacer { height: 96px; }
 .heroCopy { position: relative; z-index: 4; display: flex; flex-direction: column; align-items: center; max-width: 1200px; margin: clamp(8px, 1.6vh, 24px) auto 0; text-align: center; color: #fff; }
-.heroEyebrow { display: inline-flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 28px; font-family: var(--font-label); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: rgba(255,255,255,.78); }
+.heroEyebrow { display: inline-flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 14px; font-family: var(--font-label); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: rgba(255,255,255,.78); }
 .heroEyebrow i { flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%; background: #fff; box-shadow: 0 0 18px rgba(255,255,255,.45); }
 .heroCopy h1 { margin: 0; font-size: var(--display-size); font-weight: 500; line-height: 1.02; letter-spacing: -.065em; text-shadow: 0 8px 40px rgba(0,0,0,.45); }
 .heroCopy h1 span { color: rgba(255,255,255,.78); }
@@ -134,7 +134,7 @@
   .navEnd { gap: 8px; }
   .navCta { min-height: 42px; padding-inline: 12px; font-size: 12px; }
   .navCta svg { display: none; }
-  .heroEyebrow { max-width: 270px; font-size: 10px; margin-bottom: 22px; }
+  .heroEyebrow { max-width: 270px; font-size: 10px; margin-bottom: 12px; }
 }
 @media (max-width: 370px) { .navCta { display: none; } }
 @media (prefers-reduced-motion: reduce) { .page *, .page *::before, .page *::after { animation: none !important; transition: none !important; } }
