@@ -10,7 +10,7 @@
   color: var(--ink);
   background: var(--nav-links-bg);
   cursor: pointer;
-  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, width 0.28s ease, height 0.28s ease;
 }
 
 .toggle:hover {
@@ -39,3 +39,13 @@
 
 :global(html[data-theme='dark']) .sun { display: block; }
 :global(html[data-theme='dark']) .moon { display: none; }
+
+:global(nav[data-compact]) .toggle {
+  width: 34px;
+  height: 34px;
+}
+
+:global(nav[data-compact]) .toggle svg {
+  width: 15px;
+  height: 15px;
+}

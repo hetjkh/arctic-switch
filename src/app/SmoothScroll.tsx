@@ -3,10 +3,12 @@
 import { ReactLenis, useLenis } from 'lenis/react';
 import type { ReactNode } from 'react';
 import { useEffect } from 'react';
+import { useReducedMotion } from 'framer-motion';
 import 'lenis/dist/lenis.css';
 
 function AnchorScroll() {
   const lenis = useLenis();
+  const reduced = useReducedMotion();
 
   useEffect(() => {
     if (!lenis) return;
@@ -23,23 +25,24 @@ function AnchorScroll() {
       if (!el) return;
 
       event.preventDefault();
-      lenis.scrollTo(el as HTMLElement, { offset: -24, duration: 1.15 });
+      lenis.scrollTo(el as HTMLElement, { offset: -120, duration: reduced ? 0 : 1.15, immediate: !!reduced });
     };
 
     document.addEventListener('click', onClick);
     return () => document.removeEventListener('click', onClick);
-  }, [lenis]);
+  }, [lenis, reduced]);
 
   return null;
 }
 
 export default function SmoothScroll({ children }: { children: ReactNode }) {
+  const reduced = useReducedMotion();
   return (
     <ReactLenis
       root
       options={{
         duration: 1.15,
-        smoothWheel: true,
+        smoothWheel: !reduced,
         touchMultiplier: 1.4,
       }}
     >
