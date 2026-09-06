@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import ThemeToggle from '../components/ThemeToggle';
 import ScrollHero from './ScrollHero';
 import ScrollProgress from './ScrollProgress';
 import ProductSections from './ProductSections';
@@ -28,9 +29,12 @@ export default function Home() {
             <a href="#security">Security</a>
             <a href="#download">Download</a>
           </div>
-          <a className={styles.navCta} href="#download">
-            Get ArcticSwitch <Arrow />
-          </a>
+          <div className={styles.navEnd}>
+            <ThemeToggle />
+            <a className={styles.navCta} href="#download">
+              Get ArcticSwitch <Arrow />
+            </a>
+          </div>
         </nav>
       <ScrollHero />
 

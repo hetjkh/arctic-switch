@@ -27,13 +27,18 @@ export const metadata: Metadata = {
     'Manage messaging, email, work apps, unread messages, and isolated account sessions from one focused desktop workspace.',
 };
 
+const themeInit = `(function(){try{var t=localStorage.getItem('arctic-theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme='dark';}})();`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${spaceMono.variable}`}>
+    <html lang="en" className={`${spaceGrotesk.variable} ${spaceMono.variable}`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInit }} />
+      </head>
       <body>
         <SmoothScroll>{children}</SmoothScroll>
       </body>
