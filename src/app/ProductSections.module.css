@@ -1,4 +1,4 @@
-.sections { --text: #201e27; --secondary: #6c6976; --accent: #7961b5; --border: #e8e6ec; color: var(--text); background: #fff; }
+.sections { --text: #201e27; --secondary: #6c6976; --accent: #201e27; --border: #e8e6ec; color: var(--text); background: #fff; }
 .sections button { cursor: pointer; font-family: inherit; }
 .sections button:focus-visible, .sections input:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
 .stats, .features, .security, .capabilities { width: min(1280px, calc(100% - 96px)); margin-inline: auto; }
@@ -114,6 +114,70 @@
 .capability > button > span:last-child { display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid var(--border); border-radius: 50%; transition: background .2s, color .2s; }
 .capability > button:hover > span:last-child { background: var(--text); color: #fff; }
 .capabilityDetail { margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--border); font-size: 16px; line-height: 1.6; color: var(--secondary); }
+
+.features { padding-block: 88px; }
+.features .sectionHeading { gap: 48px; margin-bottom: 36px; }
+.features .eyebrow { margin-bottom: 14px; font-size: 11px; }
+.features h2 { font-size: clamp(38px, 4.4vw, 64px); line-height: 1.08; letter-spacing: -.045em; }
+.features .sectionHeading > p { font-size: 16px; line-height: 1.55; }
+.features .featureTabs button { gap: 10px; padding: 16px 8px; font-size: 15px; }
+.features .featureTabs button > span { font-size: 11px; }
+.features .featurePanel { gap: 48px; padding-top: 36px; }
+.features .featureCopy > .eyebrow { font-size: 13px; margin-bottom: 18px; letter-spacing: .1em; }
+.features .featureCopy h3 { font-size: clamp(32px, 3.2vw, 46px); line-height: 1.12; }
+.features .featureCopy > p { margin: 24px 0 28px; font-size: 18px; line-height: 1.65; max-width: 420px; }
+.features .featureNote { font-size: 15px; gap: 10px; margin-top: 4px; line-height: 1.55; }
+.features .preview { border-radius: 14px; }
+.features .previewBody { min-height: 360px; padding: 18px; }
+.features .windowBar { min-height: 42px; padding: 10px 16px; font-size: 12px; }
+.features .previewToolbar { margin-bottom: 14px; font-size: 13px; }
+.features .inboxRow { padding: 14px 6px; gap: 12px; }
+.features .inboxRow strong, .features .sessionList strong { font-size: 14px; }
+.features .inboxRow small, .features .sessionList small { font-size: 12px; }
+.features .searchLabel { margin-bottom: 14px; font-size: 15px; }
+.features .searchBox { padding: 11px; }
+.features .sessionList > div { padding: 16px 4px; gap: 12px; }
+.features .previewHint { margin-top: 16px; font-size: 12px; }
+
+.security { padding-block: 72px; }
+.security .securityGrid { gap: 64px; }
+.security .eyebrow { margin-bottom: 14px; font-size: 11px; }
+.security h2 { font-size: clamp(28px, 3.2vw, 44px); line-height: 1.12; letter-spacing: -.04em; }
+.security .securityCopy > p { margin-top: 16px; font-size: 16px; line-height: 1.55; }
+.security .benefits { margin-top: 22px; }
+.security .benefits > div { gap: 14px; padding-block: 14px; }
+.security .benefits > div > span { font-size: 11px; }
+.security .benefits p { font-size: 13px; line-height: 1.5; }
+.security .benefits strong { margin-bottom: 2px; font-size: 15px; }
+.security .settingsCard { padding: 26px; border-radius: 18px; }
+.security .settingsTitle { gap: 14px; }
+.security .lockIcon { width: 42px; height: 42px; border-radius: 12px; }
+.security .lockIcon svg { width: 20px; }
+.security .settingsTitle .eyebrow { font-size: 9px; margin-bottom: 4px; }
+.security .settingsTitle h3 { font-size: 20px; }
+.security .settingsIntro { margin: 16px 0 10px; font-size: 14px; }
+.security .setting { gap: 16px; padding-block: 18px; }
+.security .setting strong { font-size: 14px; }
+.security .setting small { margin-top: 4px; font-size: 12px; }
+.security .switch { width: 42px; height: 24px; }
+.security .switch span { height: 16px; width: 16px; }
+.security .switch[aria-checked=true] span { transform: translateX(18px); }
+.security .settingsFoot { padding-top: 16px; font-size: 10px; }
+
+.capabilities { padding-block: 88px; }
+.capabilities .sectionHeading { gap: 48px; margin-bottom: 36px; }
+.capabilities .eyebrow { margin-bottom: 14px; font-size: 11px; }
+.capabilities h2 { font-size: clamp(28px, 3.2vw, 44px); line-height: 1.12; letter-spacing: -.04em; }
+.capabilities .sectionHeading > p { font-size: 16px; line-height: 1.55; }
+.capabilities .capability { padding: 26px; }
+.capabilities .capabilityTop { margin-bottom: 28px; }
+.capabilities .capabilityTop svg { width: 22px; height: 22px; }
+.capabilities .capabilityTop > span { font-size: 11px; padding: 5px 9px; }
+.capabilities .capability h3 { font-size: 18px; margin-bottom: 8px; }
+.capabilities .capability > p { min-height: 44px; font-size: 14px; line-height: 1.5; }
+.capabilities .capability > button { margin-top: 16px; padding-top: 14px; font-size: 12px; }
+.capabilities .capability > button > span:last-child { width: 28px; height: 28px; }
+.capabilities .capabilityDetail { margin-top: 14px; padding-top: 14px; font-size: 13px; }
 @media (max-width: 1100px) {
   .featurePanel { gap: 32px; grid-template-columns: .8fr 1.2fr; }
   .securityGrid { gap: 48px; }
@@ -137,6 +201,15 @@
   .featureTabs button { padding-block: 18px; }
   .previewBody { min-height: 430px; padding: 24px; }
   .capabilityGrid { grid-template-columns: 1fr 1fr; }
+  .features { padding-block: 64px; }
+  .features h2 { font-size: clamp(34px, 7vw, 52px); }
+  .features .featurePanel { gap: 28px; padding-top: 28px; }
+  .features .previewBody { min-height: 340px; }
+  .security { padding-block: 56px; }
+  .security h2 { font-size: clamp(26px, 6vw, 36px); }
+  .security .securityGrid { gap: 28px; }
+  .capabilities { padding-block: 64px; }
+  .capabilities h2 { font-size: clamp(26px, 6vw, 36px); }
 }
 @media (max-width: 480px) {
   .stats, .features, .security, .capabilities { width: calc(100% - 36px); }
@@ -167,6 +240,22 @@
   .capability { padding: 28px; }
   .capabilityTop { margin-bottom: 26px; }
   .capability > p { min-height: 0; }
+  .features { padding-block: 56px; }
+  .features h2 { font-size: clamp(32px, 9vw, 44px); }
+  .features .sectionHeading > p { font-size: 15px; }
+  .features .featureCopy h3 { font-size: clamp(28px, 7.5vw, 38px); }
+  .features .featureCopy > p { font-size: 16px; margin: 20px 0 24px; }
+  .features .featureNote { font-size: 14px; }
+  .features .previewBody { min-height: 320px; }
+  .security { padding-block: 48px; }
+  .security h2 { font-size: clamp(24px, 8vw, 32px); }
+  .security .securityCopy > p { font-size: 15px; }
+  .security .settingsCard { padding: 20px; }
+  .security .settingsTitle h3 { font-size: 18px; }
+  .capabilities { padding-block: 56px; }
+  .capabilities h2 { font-size: clamp(24px, 8vw, 32px); }
+  .capabilities .sectionHeading > p { font-size: 15px; }
+  .capabilities .capability { padding: 22px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .sections *, .sections *::before, .sections *::after { transition: none !important; animation: none !important; }

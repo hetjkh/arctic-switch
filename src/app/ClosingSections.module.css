@@ -1,7 +1,7 @@
 .closing { color: #201e27; background: #fff; }
 .download { width: min(1280px, calc(100% - 96px)); margin-inline: auto; padding: 108px 24px 116px; border-top: 1px solid #e8e6ec; text-align: center; }
 .downloadContent { display: flex; flex-direction: column; align-items: center; }
-.eyebrow { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 32px; color: #7961b5; font-size: 13px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.eyebrow { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 32px; color: #201e27; font-size: 13px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
 .eyebrow > span { width: 7px; height: 7px; background: currentColor; border-radius: 50%; }
 .download h2 { margin: 0; font-size: clamp(52px, 7.2vw, 108px); font-weight: 800; line-height: 1.04; letter-spacing: -.055em; }
 .download h2 > span { color: #77717f; }
@@ -33,8 +33,8 @@
 .footerBottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; padding-block: 25px 32px; border-top: 1px solid #343238; color: #fff; font-size: 13px; }
 .footerBottom small { font-size: inherit; }
 .signature { display: inline-flex; align-items: center; gap: 8px; }
-.signature i { width: 5px; height: 5px; border-radius: 50%; background: #7961b5; }
-.closing a:focus-visible { outline: 2px solid #7961b5; outline-offset: 6px; }
+.signature i { width: 5px; height: 5px; border-radius: 50%; background: #201e27; }
+.closing a:focus-visible { outline: 2px solid #201e27; outline-offset: 6px; }
 @media (max-width: 900px) {
   .download { width: calc(100% - 48px); }
   .footer { padding-inline: 24px; }

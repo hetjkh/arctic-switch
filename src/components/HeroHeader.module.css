@@ -8,6 +8,10 @@
   background: #e8ecf4;
 }
 
+.hero :is(h1, h2, h3, .title) {
+  font-family: var(--font-title);
+}
+
 .sky {
   position: absolute;
   inset: 0;

@@ -26,9 +26,9 @@ export default function ScrollHero() {
   const sceneOpacity = useTransform(progress, [0.3, 0.52], [0, 1]);
   const copyOpacity = useTransform(progress, [0.38, 0.53], [0, 1]);
   const copyY = useTransform(progress, [0.38, 0.55], [48, 0]);
-  const deviceScale = useTransform(progress, [0, 0.22, 0.54], [0.9, 1.04, 0.7]);
-  const deviceX = useTransform(progress, [0, 0.34, 0.56, 1], ['0vw', '0vw', '20vw', '20vw']);
-  const deviceY = useTransform(progress, [0, 0.2, 0.5], ['32vh', '20vh', '0vh']);
+  const deviceScale = useTransform(progress, [0, 0.22, 0.54], [0.82, 0.96, 0.66]);
+  const deviceX = useTransform(progress, [0, 0.34, 0.56, 1], ['0vw', '0vw', '18vw', '18vw']);
+  const deviceY = useTransform(progress, [0, 0.2, 0.5], ['28vh', '18vh', '8vh']);
   const cueOpacity = useTransform(progress, [0, 0.08, 0.2], [1, 1, 0]);
 
   return (

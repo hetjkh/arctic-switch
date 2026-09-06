@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import ScrollHero from './ScrollHero';
+import ScrollProgress from './ScrollProgress';
 import ProductSections from './ProductSections';
 import ClosingSections from './ClosingSections';
 import styles from './page.module.css';
@@ -13,6 +14,7 @@ const Arrow = () => (
 export default function Home() {
   return (
     <main className={styles.page}>
+      <ScrollProgress />
         <nav
           className={styles.nav}
           aria-label="Primary navigation"
