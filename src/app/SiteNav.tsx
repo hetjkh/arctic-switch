@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useLenis } from 'lenis/react';
 import { useState } from 'react';
 import ThemeToggle from '../components/ThemeToggle';
+import { useDownloadModal } from '../components/DownloadModal';
 import styles from './page.module.css';
 
 const Arrow = () => (
@@ -14,6 +15,7 @@ const Arrow = () => (
 
 export default function SiteNav() {
   const [compact, setCompact] = useState(false);
+  const { openDownload } = useDownloadModal();
 
   useLenis((lenis) => {
     const next = lenis.scroll > 40;
@@ -37,9 +39,9 @@ export default function SiteNav() {
       </div>
       <div className={styles.navEnd}>
         <ThemeToggle />
-        <a className={styles.navCta} href="#download">
+        <button type="button" className={styles.navCta} onClick={openDownload}>
           Get the app <Arrow />
-        </a>
+        </button>
       </div>
     </nav>
   );

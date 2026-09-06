@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { motion, useReducedMotion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
+import { useDownloadModal } from '../components/DownloadModal';
 import styles from './page.module.css';
 
 const Arrow = () => (
@@ -21,6 +22,7 @@ const apps = [
 export default function ScrollHero() {
   const rootRef = useRef<HTMLElement>(null);
   const reduced = useReducedMotion();
+  const { openDownload } = useDownloadModal();
   const [narrow, setNarrow] = useState(false);
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
 
@@ -129,7 +131,7 @@ export default function ScrollHero() {
             <span className={styles.heroEyebrow}><i aria-hidden="true" /> A little less switching. A lot more focus.</span>
             <h1>Every account.<br /><span>One calm workspace.</span></h1>
             <div className={styles.heroActions}>
-              <a className={styles.primaryButton} href="#download">Download for free <Arrow /></a>
+              <button type="button" className={styles.primaryButton} onClick={openDownload}>Download for free <Arrow /></button>
               <a className={styles.secondaryButton} href="#features">Explore the workspace <Arrow /></a>
             </div>
           </motion.div>
@@ -145,7 +147,7 @@ export default function ScrollHero() {
               projects, and workspaces without losing your place.
             </p>
             <div className={styles.storyActions}>
-              <a className={styles.storyPrimary} href="#download">Download for free <Arrow /></a>
+              <button type="button" className={styles.storyPrimary} onClick={openDownload}>Download for free <Arrow /></button>
               <a className={styles.storySecondary} href="#features">Explore features</a>
             </div>
             <div className={styles.storyPoints}>

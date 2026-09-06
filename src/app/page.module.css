@@ -9,7 +9,7 @@
 .navLinks a { color: var(--nav-link); font-size: 14px; transition: color .2s, font-size .28s ease; }
 .navLinks a:hover { color: var(--nav-link-hover); }
 .navEnd { display: flex; align-items: center; gap: 14px; transition: gap .28s ease; }
-.navCta { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 46px; padding: 0 20px; border-radius: 12px; color: var(--inverse-fg); background: var(--inverse-bg); font-size: 14px; font-weight: 600; white-space: nowrap; transition: transform .2s, min-height .28s ease, padding .28s ease, font-size .28s ease, border-radius .28s ease, gap .28s ease; }
+.navCta { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 46px; padding: 0 20px; border: 0; border-radius: 12px; color: var(--inverse-fg); background: var(--inverse-bg); font: inherit; font-size: 14px; font-weight: 600; white-space: nowrap; cursor: pointer; transition: transform .2s, min-height .28s ease, padding .28s ease, font-size .28s ease, border-radius .28s ease, gap .28s ease; }
 .navCompact { top: 12px; min-height: 52px; padding: 6px 10px 6px 18px; gap: 16px; border-radius: 14px; }
 .navCompact .navBrand img { width: clamp(112px, 11vw, 148px); }
 .navCompact .navLinks { gap: 20px; }
@@ -38,7 +38,7 @@
 .heroCopy h1 { margin: 0; font-size: var(--display-size); font-weight: 500; line-height: 1.02; letter-spacing: -.065em; text-shadow: 0 8px 40px rgba(0,0,0,.45); }
 .heroCopy h1 span { color: rgba(255,255,255,.78); }
 .heroActions { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 16px 28px; margin-top: 36px; }
-.primaryButton, .secondaryButton { display: inline-flex; align-items: center; justify-content: center; gap: 20px; min-height: 58px; padding: 0 26px; border-radius: 14px; font-size: 16px; font-weight: 600; transition: transform .25s, background .25s; }
+.primaryButton, .secondaryButton { display: inline-flex; align-items: center; justify-content: center; gap: 20px; min-height: 58px; padding: 0 26px; border: 0; border-radius: 14px; font: inherit; font-size: 16px; font-weight: 600; cursor: pointer; transition: transform .25s, background .25s; }
 .primaryButton { color: #000; background: #fff; box-shadow: 0 12px 40px rgba(0,0,0,.28); }
 .primaryButton:hover { transform: translateY(-3px); background: #e6e6e6; }
 .secondaryButton { padding-inline: 0; color: #fff; }
@@ -55,7 +55,7 @@
 .storyCopy h2 span:last-child { color: var(--story-muted); margin-top: 4px; }
 .storyCopy p { max-width: 440px; margin: 22px 0 0; color: var(--story-muted); font-size: var(--body-size); line-height: 1.7; }
 .storyActions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 28px; }
-.storyPrimary, .storySecondary { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; border-radius: 14px; font-size: 15px; font-weight: 600; transition: transform .25s, background .25s, box-shadow .25s; }
+.storyPrimary, .storySecondary { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; border: 0; border-radius: 14px; font: inherit; font-size: 15px; font-weight: 600; cursor: pointer; transition: transform .25s, background .25s, box-shadow .25s; }
 .storyPrimary { gap: 14px; padding: 0 20px 0 22px; color: var(--inverse-fg); background: var(--inverse-bg); }
 .storyPrimary svg { width: 18px; fill: none; stroke: currentColor; stroke-width: 1.6; }
 .storySecondary { padding: 0 20px; border: 1px solid var(--line); color: var(--story-ink); background: transparent; }

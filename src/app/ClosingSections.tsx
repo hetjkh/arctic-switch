@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { motion, useReducedMotion } from 'framer-motion';
+import { useDownloadModal } from '../components/DownloadModal';
 import styles from './ClosingSections.module.css';
 
 function Arrow({ up = false }: { up?: boolean }) {
@@ -10,6 +11,7 @@ function Arrow({ up = false }: { up?: boolean }) {
 
 export default function ClosingSections() {
   const reduced = useReducedMotion();
+  const { openDownload } = useDownloadModal();
 
   return <div className={styles.closing}>
     <section className={styles.download} id="download" aria-labelledby="download-title">
@@ -17,7 +19,7 @@ export default function ClosingSections() {
         <span className={styles.eyebrow}><span aria-hidden="true" />Your calmer desktop starts here</span>
         <h2 id="download-title">One window.<br /><span>Everything in reach.</span></h2>
         <p>Bring every account, unread, browser tab, and workspace<br className={styles.desktopBreak} /> into one focused desktop.</p>
-        <a className={styles.downloadButton} href="#">Download ArcticSwitch<span><Arrow /></span></a>
+        <button type="button" className={styles.downloadButton} onClick={openDownload}>Download ArcticSwitch<span><Arrow /></span></button>
         <div className={styles.platforms} aria-label="Available for Windows, macOS, and Linux">
           <span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m2 4 7-1v6H2zm8-1.2 8-1.3V9h-8zM2 10h7v6l-7-1zm8 0h8v7.5l-8-1.3z" /></svg>Windows</span>
           <i aria-hidden="true" />
