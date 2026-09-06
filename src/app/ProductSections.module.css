@@ -1,4 +1,4 @@
-.sections { --text: var(--ink); --secondary: var(--muted); --border: var(--line); color: var(--text); background: var(--background); }
+.sections { --text: var(--ink); --secondary: var(--muted); --border: var(--line); color: var(--text); background: transparent; }
 .sections button { cursor: pointer; font-family: inherit; }
 .sections button:focus-visible, .sections input:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
 .stats, .features, .security, .capabilities { width: min(var(--content-width), calc(100% - 2 * var(--page-gutter))); margin-inline: auto; }
@@ -10,11 +10,15 @@
 .statsGrid strong span { color: var(--accent); }
 .statsGrid > div > span { display: block; margin-top: 18px; color: var(--secondary); font-size: 15px;  line-height: 1.5; }
 .features, .capabilities { padding-block: var(--section-space); }
-.sectionHeading { display: grid; grid-template-columns: 1.7fr 1fr; gap: 80px; align-items: end; margin-bottom: 72px; }
+.sectionHeading { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1.05fr); gap: 40px; align-items: end; margin-bottom: 72px; }
 .eyebrow { display: block; margin-bottom: 22px; color: var(--accent); font-family: var(--font-label); font-size: 11px; font-weight: 400; letter-spacing: .1em; text-transform: uppercase; }
 .sections h2 { margin: 0; font-size: var(--heading-size); font-weight: 500; line-height: 1.08; letter-spacing: -.04em; }
+.sectionHeading h2 { font-size: clamp(34px, 3.8vw, 58px); }
 .sections h2 span { color: var(--secondary); }
 .sectionHeading > p, .securityCopy > p { margin: 0 0 4px; color: var(--secondary); font-size: var(--body-size); line-height: 1.75; }
+.sectionLead { font-size: clamp(15px, 1.15vw, 18px); }
+.sectionLead span { display: block; }
+.sectionLead span:first-child { white-space: nowrap; }
 .featureTabs { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid var(--border); }
 .featureTabs button { position: relative; display: flex; align-items: center; gap: 12px; padding: 23px 10px; border: 0; color: var(--secondary); background: transparent; font-size: 17px; font-weight: 500; transition: color .2s; }
 .featureTabs button:hover, .featureTabs button[aria-pressed=true] { color: var(--text); }
@@ -128,7 +132,8 @@
 .sections h2 span { color: var(--accent); }
 
 @media (max-width: 1100px) {
-  .sectionHeading { gap: 48px; }
+  .sectionHeading { gap: 32px; }
+  .sectionHeading h2 { font-size: clamp(30px, 3.4vw, 48px); }
   .featurePanel { grid-template-columns: .85fr 1.25fr; gap: 40px; }
   .securityGrid { gap: 48px; }
   .previewToolbar { flex-wrap: wrap; }
@@ -136,6 +141,9 @@
   .capability { padding: 28px; }
   .settingsCard { padding: 28px; }
   .featureTabs button { font-size: 15px; }
+}
+@media (max-width: 900px) {
+  .sectionLead span:first-child { white-space: normal; }
 }
 @media (max-width: 800px) {
   .sectionHeading { grid-template-columns: 1fr; gap: 28px; margin-bottom: 48px; }

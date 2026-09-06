@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import SmoothScroll from './SmoothScroll';
+import StarBackground from '../components/StarBackground';
 import './globals.css';
 
 const spaceGrotesk = localFont({
@@ -40,6 +41,7 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeInit }} />
       </head>
       <body>
+        <StarBackground />
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>

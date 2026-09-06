@@ -43,7 +43,7 @@
   --nav-link-hover-bg: rgba(255, 255, 255, 0.1);
   --hero-bg: #000000;
   --hero-sky-bg: #000000;
-  --hero-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0.62) 0%, rgba(0, 0, 0, 0.4) 40%, #000 100%);
+  --hero-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.42) 38%, #000 100%);
   --hero-wash: none;
   --story-backdrop: #000000;
   --story-ink: #ffffff;
@@ -95,7 +95,7 @@ html[data-theme='light'] {
   --nav-link-hover-bg: rgba(0, 0, 0, 0.06);
   --hero-bg: #ffffff;
   --hero-sky-bg: #ffffff;
-  --hero-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0.08) 42%, #fff 100%);
+  --hero-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0.52) 0%, rgba(0, 0, 0, 0.22) 40%, #fff 100%);
   --hero-wash: none;
   --story-backdrop: #ffffff;
   --story-ink: #000000;

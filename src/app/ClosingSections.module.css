@@ -1,5 +1,5 @@
-.closing { color: var(--ink); background: var(--background); }
-.download { width: min(var(--content-width), calc(100% - 2 * var(--page-gutter))); margin-inline: auto; padding: var(--section-space) var(--page-gutter); margin-bottom: var(--section-space); border: 1px solid var(--line); border-radius: 32px; background: radial-gradient(ellipse at 50% 100%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 70%), var(--surface); text-align: center; }
+.closing { color: var(--ink); background: transparent; }
+.download { width: min(var(--content-width), calc(100% - 2 * var(--page-gutter))); margin-inline: auto; padding: var(--section-space) var(--page-gutter); margin-bottom: var(--section-space); border: 1px solid var(--line); border-radius: 32px; background: transparent; text-align: center; }
 .downloadContent { display: flex; flex-direction: column; align-items: center; }
 .eyebrow { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 32px; color: var(--accent); font-family: var(--font-label); font-size: 11px; font-weight: 400; letter-spacing: .1em; text-transform: uppercase; }
 .eyebrow > span { width: 7px; height: 7px; background: currentColor; border-radius: 50%; }

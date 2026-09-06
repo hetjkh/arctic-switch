@@ -111,7 +111,7 @@ export default function ProductSections() {
     </Reveal>
 
     <Reveal className={styles.features} id="features">
-      <div className={styles.sectionHeading}><div><span className={styles.eyebrow}>01 / Built around your day</span><h2>Less window juggling.<br /><span>More work in view.</span></h2></div><p>The controls of a browser, an inbox, and a workspace manager. Together in one focused desktop.</p></div>
+      <div className={styles.sectionHeading}><div><span className={styles.eyebrow}>01 / Built around your day</span><h2>Less juggling.<br /><span>More work in view.</span></h2></div><p className={styles.sectionLead}><span>The controls of a browser, an inbox, and a workspace manager.</span><span>Together in one focused desktop.</span></p></div>
       <div className={styles.featureTabs} aria-label="Explore features">{features.map((feature, index) => <button key={feature.label} aria-pressed={active === index} aria-controls="feature-panel" onClick={() => setActive(index)}><span>0{index + 1}</span>{feature.label}{active === index && <motion.i layoutId="feature-underline" transition={{ duration: reduced ? 0 : 0.25 }} />}</button>)}</div>
       <div className={styles.featurePanel} id="feature-panel">
         <motion.div key={active} className={styles.featureCopy} initial={reduced ? false : { opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: reduced ? 0 : 0.4 }}><span className={styles.eyebrow}>{features[active].label}</span><h3>{features[active].title}</h3><p>{features[active].description}</p><span className={styles.featureNote}><span aria-hidden="true">✓</span>{features[active].note}</span></motion.div>
