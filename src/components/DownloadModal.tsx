@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { createContext, useCallback, useContext, useEffect, useId, useRef, useState, type ReactNode } from 'react';
 import { useLenis } from 'lenis/react';
@@ -45,12 +45,12 @@ function DownloadModal({ open, onClose }: { open: boolean; onClose: () => void }
     <div className={styles.content}>
       <button className={styles.close} onClick={onClose} aria-label="Close download options" autoFocus><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6" /></svg></button>
       <span className={styles.kicker}>A LITTLE LESS SWITCHING</span>
-      <h2 id={titleId}>Make room for a calmer day.</h2>
+      <h2 id={titleId}>Make room for a <em>calmer day.</em></h2>
       <p id={descriptionId} className={styles.lead}>Your favorite apps. Your own space.<br />Find ArcticSwitch for your desktop.</p>
       <div className={styles.options}>{platforms.map(({ name, detail, meta, href, icon }) => <article key={name} className={styles.option}>
         <span className={styles.icon}><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">{icon}</svg></span>
         <h3>{name}</h3><p>{detail}</p><span className={styles.meta}>{meta}</span>
-        {href ? <a href={href} className={styles.download} download>Download <span aria-hidden="true">↓</span></a> : <span className={styles.unavailable}>Installer not available yet</span>}
+        {href ? <a href={href} className={styles.download} download>Download <span aria-hidden="true">↓</span></a> : <span className={styles.unavailable}><i />Installer coming soon</span>}
       </article>)}</div>
       <p className={styles.note}>Separate accounts. One peaceful place.</p>
     </div>
@@ -62,3 +62,4 @@ export function DownloadProvider({ children }: { children: ReactNode }) {
   const closeDownload = useCallback(() => setOpen(false), []);
   return <DownloadContext.Provider value={{ openDownload, closeDownload }}>{children}<DownloadModal open={open} onClose={closeDownload} /></DownloadContext.Provider>;
 }
+
