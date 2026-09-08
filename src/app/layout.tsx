@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import SmoothScroll from './SmoothScroll';
-import StarBackground from '../components/StarBackground';
 import './globals.css';
 
 const spaceGrotesk = localFont({
@@ -28,20 +27,14 @@ export const metadata: Metadata = {
     'Manage messaging, email, work apps, unread messages, and isolated account sessions from one focused desktop workspace.',
 };
 
-const themeInit = `(function(){try{var t=localStorage.getItem('arctic-theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme='dark';}})();`;
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${spaceMono.variable}`} suppressHydrationWarning>
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: themeInit }} />
-      </head>
+    <html lang="en" className={`${spaceGrotesk.variable} ${spaceMono.variable}`}>
       <body>
-        <StarBackground />
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>

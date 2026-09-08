@@ -1,0 +1,63 @@
+.section { overflow: hidden; padding: 104px 0 94px; color: #050505; background: #fff; }
+.heading { padding: 0 24px; text-align: center; }
+.heading > span { display: inline-flex; padding: 5px 11px; border: 1px solid #adcce4; border-radius: 8px; background: #edf7ff; color: #315874; font-size: 10px; font-weight: 500; }
+.heading h2 { margin-top: 17px; font-size: clamp(36px, 4vw, 54px); font-weight: 600; letter-spacing: -.05em; line-height: 1.15; }
+.heading h2 em { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
+.heading p { margin-top: 17px; color: #63717c; font-size: 14px; line-height: 1.75; }
+.benefits { margin-top: 54px; }
+.lane { overflow: hidden; padding: 5px 0; mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent); }
+.lane + .lane { margin-top: 18px; }
+.track { display: flex; width: max-content; animation: solutionLeft 45s linear infinite; will-change: transform; }
+.lane:nth-child(2) .track { animation-name: solutionRight; animation-duration: 52s; }
+.lane:nth-child(3) .track { animation-duration: 48s; }
+.benefits:hover .track { animation-play-state: paused; }
+.group { display: flex; flex: none; gap: 24px; padding-right: 24px; }
+.benefit { display: grid; place-items: center; min-width: 330px; min-height: 62px; padding: 12px 24px; border: 1px solid #c9dfee; border-radius: 11px; background: linear-gradient(145deg, #f8fcff, #edf6fd); box-shadow: 0 8px 18px #315b7610; font-size: 20px; font-weight: 500; letter-spacing: -.025em; white-space: nowrap; }
+@keyframes solutionLeft { to { transform: translateX(-50%); } }
+@keyframes solutionRight { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+.testimonial { position: relative; display: grid; grid-template-columns: 52px minmax(0, 890px) 52px; align-items: center; justify-content: space-between; gap: 30px; max-width: 1320px; min-height: 300px; margin: 57px auto 0; padding: 0 28px; }
+.quote { text-align: center; }
+.avatar { display: grid; place-items: center; width: 76px; height: 76px; margin: 0 auto 19px; border: 7px solid #e5f2fc; border-radius: 50%; background: linear-gradient(145deg, #b8dfff, #7caed2); color: #17364d; font-size: 22px; font-weight: 700; box-shadow: 0 8px 24px #315b7618; }
+.person { display: flex; justify-content: center; align-items: center; gap: 5px; font-size: 12px; }
+.person strong { font-weight: 600; }
+.person span { color: #63717c; }
+.person span::before { content: '·'; margin-right: 5px; }
+.stars { margin-top: 13px; color: #315874; font-size: 16px; letter-spacing: 3px; }
+.quote blockquote { max-width: 890px; margin: 13px auto 0; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(20px, 2vw, 28px); font-style: italic; line-height: 1.35; text-wrap: balance; }
+.arrow { display: grid; place-items: center; width: 42px; height: 42px; padding: 0; border: 1px solid #315874; border-radius: 50%; background: #fff; color: #17364d; transition: background .2s, transform .2s; }
+.arrow:hover { background: #dceefb; transform: scale(1.06); }
+.dots { display: flex; justify-content: center; gap: 7px; margin-top: 21px; }
+.dots button { width: 7px; height: 7px; padding: 0; border: 0; border-radius: 50%; background: #c5d6e2; }
+.dots .activeDot { width: 21px; border-radius: 5px; background: #315874; }
+
+@media (max-width: 760px) {
+  .section { padding: 72px 0 68px; }
+  .heading h2 { font-size: 38px; }
+  .heading p { max-width: 470px; margin-inline: auto; font-size: 12px; }
+  .heading p br { display: none; }
+  .benefits { margin-top: 38px; }
+  .lane + .lane { margin-top: 12px; }
+  .group { gap: 14px; padding-right: 14px; }
+  .benefit { min-width: 245px; min-height: 54px; padding: 10px 17px; font-size: 15px; }
+  .testimonial { grid-template-columns: 40px minmax(0, 1fr) 40px; gap: 10px; margin-top: 42px; padding-inline: 14px; }
+  .arrow { width: 38px; height: 38px; }
+  .quote blockquote { font-size: 20px; }
+}
+
+@media (max-width: 480px) {
+  .heading h2 { font-size: 32px; }
+  .testimonial { display: flex; flex-wrap: wrap; justify-content: center; }
+  .quote { order: -1; flex: 0 0 100%; }
+  .previous, .next { margin-top: 5px; }
+  .avatar { width: 67px; height: 67px; }
+  .person { flex-direction: column; gap: 0; }
+  .person span::before { display: none; }
+  .quote blockquote { padding-inline: 13px; font-size: 19px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track { animation: none; }
+  .group[aria-hidden='true'] { display: none; }
+  .lane { overflow-x: auto; scrollbar-width: none; }
+  .lane::-webkit-scrollbar { display: none; }
+}

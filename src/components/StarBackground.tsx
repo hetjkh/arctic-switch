@@ -105,9 +105,9 @@ export default function StarBackground() {
   const remap = (value: number, start1: number, end1: number, start2: number, end2: number) =>
     Math.max(((value - start1) * (end2 - start2)) / (end1 - start1) + start2, 0);
 
-  const animate = useCallback(() => {
+  const animate = useCallback(function animateFrame() {
     if (paused.current || reduced.current) {
-      frame.current = requestAnimationFrame(animate);
+      frame.current = requestAnimationFrame(animateFrame);
       return;
     }
     ctx.current?.clearRect(0, 0, size.current.w, size.current.h);
@@ -139,7 +139,7 @@ export default function StarBackground() {
       }
     });
 
-    frame.current = requestAnimationFrame(animate);
+    frame.current = requestAnimationFrame(animateFrame);
   }, [circleParams, drawCircle]);
 
   useEffect(() => {
